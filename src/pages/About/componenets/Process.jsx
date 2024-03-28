@@ -14,6 +14,7 @@ export default function Process() {
           Discuss your needs and preferences.
           </p>
         </div>
+        {/* //comment for git */}
 
         <div className="Design Block">
           <h2>Design Proposal</h2>
