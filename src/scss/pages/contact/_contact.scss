@@ -1,0 +1,88 @@
+@use "../../abstracts/" as *;
+
+.ContactPage {
+  margin-top: rem(90);
+  padding: rem(50) 7%;
+  height: calc(100svh - rem(90));
+  @include media-query("sm") {
+    margin-top: rem(70);
+    height: calc(100svh - rem(70));
+    padding: rem(25) rem(7);
+  }
+  .FormWrapper {
+    background: $AccentColor;
+    width: 100%;
+    height: 100%;
+    @include flex(center, center);
+
+    .First-Div {
+      width: 70%;
+      height: 90%;
+      @include flex(center, center, 28px, column);
+      padding-top: rem(100);
+      @include media-query("sm") {
+        width: 90%;
+        padding-top: rem(50);
+      }
+      .Text {
+        padding-top: rem(0);
+        font-size: rem(38);
+        @include media-query("sm") {
+          font-size: rem(26);
+        }
+      }
+      .Form {
+        padding: 0;
+        height: 100%;
+        .FieldWrapper {
+          width: 100%;
+          height: rem(500);
+          @include flex(center, space-between, 28px);
+          flex-wrap: wrap;
+          overflow: visible;
+          @include media-query("sm") {
+            overflow-y: scroll;
+            padding: rem(20) rem(10) 0;
+          }
+          input,
+          select {
+            width: 45%;
+            @include media-query("sm") {
+              width: 100%;
+            }
+          }
+          input {
+            color: $BgColor;
+            height: rem(50);
+            @include media-query("sm") {
+              height: rem(30);
+            }
+          }
+          select {
+            background: transparent;
+            color: $BgColor;
+            height: rem(50);
+            @include media-query("sm") {
+              height: rem(30);
+            }
+            option {
+              color: $TextColor;
+              height: rem(30);
+            }
+          }
+        }
+      }
+      button {
+        width: 100%;
+        padding: 0;
+        height: rem(80);
+        font-size: rem(22);
+        font-family: $AccentColor;
+        font-weight: bold;
+        @include media-query("sm") {
+          height: rem(59);
+        }
+      }
+    }
+  }
+}

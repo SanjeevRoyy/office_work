@@ -1,0 +1,53 @@
+@use "../../abstracts/" as *;
+
+.SectionTeam {
+  padding: rem(50) 7%;
+  @include media-query("sm") {
+    padding: rem(25) rem(7);
+  }
+  .Heading {
+    font-size: rem(42);
+    @include media-query("sm") {
+      font-size: rem(35);
+    }
+  }
+
+  .Boxes {
+    @include flex(space-between, flex-start, rem(10));
+    flex-wrap: wrap;
+
+    @include media-query("sm") {
+      @include flex(space-between, flex-start, rem(7));
+    }
+    .Box {
+      width: calc(25% - 10px);
+      aspect-ratio: 1/1;
+      background: antiquewhite;
+      @include flex(center, flex-end);
+      @include media-query("sm") {
+        width: calc(50% - 7px);
+      }
+
+      .ForBackground {
+        width: 100%;
+        padding: rem(16);
+        background: rgba(0, 0, 0, 0.7);
+        color: $BgColor;
+        text-align: center;
+        @include media-query("sm") {
+          padding: rem(7) rem(5);
+        }
+        h1 {
+          @include media-query("sm") {
+            font-size: rem(20);
+          }
+        }
+        p {
+          @include media-query("sm") {
+            font-size: rem(15);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "../../abstracts/" as *;
+
+.Section-Part {
+  padding: rem(50) 7%;
+
+  @include media-query("sm") {
+    padding: rem(25) rem(7);
+  }
+  .MarginHeader {
+    padding: 0;
+    margin: 0;
+    margin-bottom: rem(50);
+    font-size: rem(42);
+    @include media-query("sm") {
+      margin-bottom: rem(10);
+      font-size: rem(32);
+    }
+  }
+  .ContainerMain {
+    width: 100%;
+    @include flex(space-between, center);
+    @include media-query("sm") {
+      @include flex(space-around, flex-start, rem(10));
+      flex-wrap: wrap;
+    }
+    .Block {
+      width: rem(200);
+      @include media-query("sm") {
+        width: rem(160);
+      }
+      @include flex(center, center, rem(10), column);
+      .ImgWrapper {
+        @include flex(center, center);
+        width: 100%;
+        img {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
+          border-radius: rem(8);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@use "../abstracts/" as *;
+
+.First-Div {
+  @include flex(space-between, center, 10px, column);
+  padding: rem(10);
+  background: $TextColor;
+  border-radius: rem(12);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.4);
+
+  .Text {
+    // padding-top: rem(59);
+    text-align: center;
+    width: 100%;
+    color: $BgColor;
+    font-size: rem(26);
+  }
+  .Form {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    @include flex(space-between, center, 0, column);
+    .FieldWrapper {
+      color: $BgColor;
+      width: 100%;
+      height: 100%;
+      padding: rem(12) rem(10);
+      // height: rem(200);
+      margin-bottom: rem(100);
+      @include flex(flex-start, center, 28px, column);
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: rem(4);
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $AccentColor;
+        border-radius: rem(12);
+      }
+      * {
+        width: 100%;
+      }
+      input {
+        font-family: $AccentFont;
+        font-weight: bold;
+        padding: rem(2) rem(16);
+        border-bottom: 1px solid #ccc;
+        font-size: rem(16);
+        height: rem(70);
+        color: $BgColor;
+      }
+      select {
+        font-family: $AccentFont;
+        font-weight: bold;
+        padding: rem(2) rem(16);
+        border-bottom: 1px solid #ccc;
+        font-size: rem(16);
+        height: rem(50);
+        option {
+          color: $TextColor;
+          font-family: $AccentFont;
+          font-weight: bold;
+          height: rem(50);
+        }
+      }
+
+      input::placeholder {
+        color: $BgColor;
+        font-family: $AccentFont;
+        font-weight: bold;
+      }
+    }
+  }
+  button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: rem(50);
+    width: 100%;
+    border-bottom-left-radius: rem(12);
+    border-bottom-right-radius: rem(12);
+    background: #e2dede;
+    font-weight: bold;
+    font-size: rem(18);
+    @include flex(center, center);
+  }
+
+  
+}
+
+//

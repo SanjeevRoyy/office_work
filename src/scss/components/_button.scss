@@ -1,0 +1,40 @@
+  @use "../abstracts/" as *;
+
+ 
+  
+  .Button {
+    background: transparent;
+
+    .BtnLink {
+      height: 100%;
+      font-family: $NavFont;
+      font-weight: bold;
+      letter-spacing: rem(2);
+      font-size: rem(22 );
+      padding: rem(10) rem(28);
+      color: $TextColor;
+      background: #ffffff;
+      border-radius: 12px;
+      white-space: nowrap;
+      
+      cursor: pointer;
+
+      &:hover {
+        background: lighten(#000, 12%);
+        color: #ffffff;
+      }
+      
+      @include media-query("sm") {
+        font-size: rem(22);
+        padding:0.4375rem 0.125rem;
+      }
+      @include media-query("md") {
+        font-size: rem(16);
+        padding:0.4375rem 0.125rem;
+        
+      }
+     
+  
+      
+    }
+  }

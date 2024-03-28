@@ -1,0 +1,37 @@
+@use "../../abstracts/" as *;
+
+.MainContainer {
+  padding: rem(100) 7% rem(50);
+  @include media-query("sm") {
+    padding: rem(25) rem(7);
+  }
+  h2 {
+    font-size: rem(40);
+    margin-bottom: rem(40);
+    @include media-query("sm") {
+      margin-bottom: rem(10);
+      font-size: rem(28);
+    }
+  }
+  p {
+    font-size: rem(22);
+    font-family: $NavFont;
+    @include media-query("sm") {
+      font-size: rem(16);
+    }
+  }
+
+  ol{
+    margin-top: 40px;
+    line-height: 45px;
+    font-size: rem(22);
+
+    @include media-query('sm'){
+      font-size: rem(16);
+    }
+
+    li{
+      font-family: $NavFont;
+    }
+  }
+}

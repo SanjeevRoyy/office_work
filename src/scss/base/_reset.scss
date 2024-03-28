@@ -1,0 +1,46 @@
+@use "../abstracts/" as *;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 200ms ease-in-out;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+input,
+textarea,
+option,
+select {
+  border: none;
+}
+
+input:focus,
+textarea:focus,
+option:focus,
+select:focus {
+  outline: none;
+}
+html {
+  width: 100vw !important;
+  overflow-x: hidden !important;
+}

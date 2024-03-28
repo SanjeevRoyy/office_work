@@ -1,0 +1,57 @@
+@use "../../abstracts/" as *;
+
+.BrandSection {
+  padding: rem(50) 7%;
+
+  @include media-query("sm") {
+    padding: rem(25) rem(7);
+  }
+
+  h2 {
+    font-size: rem(38);
+    margin-bottom: rem(50);
+
+    @include media-query("sm") {
+      font-size: rem(32);
+      margin-bottom: rem(20);
+    }
+  }
+
+  .BrandWrapper {
+    @include flex(space-between, center);
+    overflow: hidden;
+
+    @include media-query("sm") {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: rem(16);
+    }
+
+    .BrandElement {
+      width: 200%;
+      max-width: rem(160);
+      flex: 1 1 auto;
+      @include flex(center, center, 5px, column);
+
+      .BrandImg {
+        flex: 1 1 auto;
+        @include flex(center, center);
+        width: 100%;
+        background: $AccentColor;
+        border-radius: rem(7);
+        aspect-ratio: 1 / 1;
+        background: url(/img/team.webp);
+        background-size: cover;
+        background-position: center;
+      }
+
+      .BrandName {
+        font-size: rem(18);
+
+        @include media-query("sm") {
+          font-size: rem(16);
+        }
+      }
+    }
+  }
+}

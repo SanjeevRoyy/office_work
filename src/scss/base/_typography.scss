@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+h1,
+h2,
+h3,
+label {
+  font-family: $HeadingFont;
+  word-wrap: break-word;
+  // line-height: 1.2rem;
+}
+
+a,
+li,
+ul,
+button {
+  font-family: $AccentFont;
+  word-wrap: break-word;
+}
+body {
+  font-family: $BodyFont;
+  font-weight: 400;
+  font-size: 100%;
+}
+
+input {
+  font-size: 1rem;
+}
+input::placeholder {
+  font-size: 16px;
+  opacity: 0.8;
+}

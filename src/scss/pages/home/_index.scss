@@ -1,0 +1,17 @@
+@forward "section";
+@forward "banner";
+@forward "brand";
+@forward "sectionaward";
+@forward "sectionwork";
+@forward "grid";
+@forward "sectionprocess";
+@forward "slider";
+@forward "blogs";
+
+@use "../../abstracts/" as *;
+.VideoSection {
+  margin-top: rem(-100);
+  @include media-query("sm") {
+    margin-top: rem(0);
+  }
+}

@@ -1,0 +1,15 @@
+@use "../abstracts" as abs;
+
+body {
+  background-color: abs.$BgColor;
+  color: black;
+}
+
+input,
+textarea {
+  background: transparent;
+}
+
+a {
+  color: inherit;
+}

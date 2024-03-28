@@ -1,0 +1,74 @@
+@use "../abstracts/" as *;
+
+.CardsSection {
+  padding: rem(100) 0;
+  background: black;
+  @include flex(center, center, 12px);
+  @include media-query("sm") {
+    flex-direction: column;
+    gap: rem(80);
+  }
+  .ImgWrapper {
+    border: 1px solid white;
+    height: rem(800);
+    width: 40%;
+    position: relative;
+    color: $BgColor;
+    background-image: url('img/img1.jpg');
+    background-size: cover;
+    background-position: center;
+    @include media-query("sm") {
+      width: 96%;
+      height: rem(400);
+    }
+    .Text {
+      background: rgba(0, 0, 0, 0.7);
+      height: 100%;
+      width: 100%;
+
+      span {
+        font-size: rem(80);
+        @include media-query("sm") {
+          font-size: rem(50);
+        }
+      }
+      font-size: rem(50);
+      text-align: center;
+      padding: rem(50);
+      @include flex(flex-end, center, 12px, column);
+      @include media-query("sm") {
+        font-size: rem(40);
+        line-height: rem(30);
+        padding: rem(40) rem(10);
+      }
+    }
+  }
+  .Button {
+    color: $BgColor;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .ImgLeft {
+    background-image: url("/img/Work With Us.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  .ImgRight {
+    background-image: url("/img/See Our Work.jpg");
+    background-size: cover;
+    background-position: center;
+    .Text {
+      @include flex(cneter, center);
+      font-weight: bold;
+      font-size: rem(24);
+      @include media-query("sm") {
+        font-weight: 400;
+        letter-spacing: rem(2);
+        line-height: rem((24));
+        font-size: rem(22);
+      }
+    }
+  }
+}

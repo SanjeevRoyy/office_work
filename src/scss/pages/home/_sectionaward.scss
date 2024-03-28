@@ -1,0 +1,63 @@
+@use "../../abstracts/" as *;
+
+.MainA {
+  padding: rem(50) 7%;
+  @include media-query("sm") {
+    padding: rem(25) rem(7);
+  }
+  h2 {
+    font-size: rem(44);
+    margin-bottom: rem(50);
+    @include media-query("sm") {
+      font-size: rem(32);
+      margin-bottom: rem(20);
+    }
+  }
+  .MainB {
+    @include flex(space-between, center);
+
+    @include media-query("sm") {
+      flex-direction: column;
+      gap: rem(20);
+    }
+    .ForText {
+      background: transparent;
+      width: 50%;
+      padding-right: rem(210);
+      @include flex(center, flex-start, 20px, column);
+      @include media-query("sm") {
+        width: 100%;
+        gap: rem(10);
+        padding: 0;
+      }
+      h4 {
+        font-family: $HeadingFont;
+        font-size: rem(26);
+        @include media-query("sm") {
+          font-size: rem(22);
+        }
+      }
+      p {
+        font-size: rem(22);
+        @include media-query("sm") {
+          font-size: rem(18);
+        }
+      }
+    }
+    .ForImage {
+      width: 50%;
+     background-color: #c7c4c4;
+      height: 600px;
+      @include flex(center, center);
+      @include media-query("sm") {
+        width: 100%;
+        height: rem(400);
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
